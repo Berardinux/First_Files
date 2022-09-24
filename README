@@ -1,0 +1,35 @@
+Hey what is up Carter IDK what you want to make but we can start working on it here!!
+Commands:[
+	git add      = Moves changes from the working directory to the staging area. This gives you the opportunity to prepare a snapshot before committing it to the official history.
+	git branch   = This command is your general-purpose branch administration tool. It lets you create isolated development environments within a single repository.
+	git clone    = Creates a copy of an existing Git repository. Cloning is the most common way for developers to obtain a working copy of a central repository.
+	git commit   = Takes the staged snapshot and commits it to the project history. Combined with git add, this defines the basic workflow for all Git users.
+	git checkout = 
+	git init     = Initializes a new Git repository. If you want to place a project under revision control, this is the first command you need to learn.
+	git log      = Lets you explore the previous revisions of a project. It provides several formatting options for displaying committed snapshots.
+	git merge    = A powerful way to integrate changes from divergent branches. After forking the project history with git branch, git merge lets you put it back together again.
+	git pull     = Pulling is the automated version of git fetch. It downloads a branch from a remote repository, then immediately merges it into the current branch. This is the Git equivalent of svn update.
+	git push     = Pushing is the opposite of fetching (with a few caveats). It lets you move a local branch to another repository, which serves as a convenient way to publish contributions. This is like svn commit, but it sends a series of commits instead of a single changeset.
+	git status   = Displays the state of the working directory and the staged snapshot. You’ll want to run this in conjunction with git add and git commit to see exactly what’s being included in the next snapshot.
+]
+# Commands to submit a pull reqest
+# Git command to clone repo
+	$(git clone https://github.com/Berardinux/test-repo)
+
+# Git command to create your own branch
+	$(git checkout -b <branch name>)
+
+# Git command to show changes and what branch that you are on
+	$(git status)
+
+# Git command to to add changes to the staging area { $(git add .) = all } { $(git add <file or folder names>) = file or folders that you want in the staging area }
+	$(git add .)
+
+# Git command to commit changes
+	$(git commit -m "<You half to put a message here>")
+
+# Git command to show commited changes
+	$(git log)
+
+# Git command to push branch to create a pull request for GitHub.com
+	$(git push origin <branch name>)
