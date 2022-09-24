@@ -22,7 +22,7 @@ Commands:[
 # Git command to show changes and what branch that you are on
 	$(git status)
 
-# Git command to to add changes to the staging area { $(git add .) = all } { $(git add <file or folder names>) = file or folders that you want in the staging area }
+# Git command to to add changes to the staging area { . = all } { <file or folder names> = file or folders that you want in the staging area }
 	$(git add .)
 
 # Git command to commit changes
