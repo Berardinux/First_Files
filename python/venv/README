@@ -1,0 +1,7 @@
+# How to run venv
+
+source venv/bin/activate
+
+# How to stop venv
+
+deactivate
