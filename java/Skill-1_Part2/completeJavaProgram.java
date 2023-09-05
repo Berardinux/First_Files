@@ -14,6 +14,9 @@ public class completeJavaProgram {
   }
   public static char playGame() {
     //Declare local variables
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter a value: ");
+    int x = Integer.parseInt(scanner.nextLine());
     char answer;
     Scanner kb = new Scanner(System.in);
     int numberToGuess = 0;
@@ -21,7 +24,7 @@ public class completeJavaProgram {
     int guesses = 0;
     boolean success = false;
 
-    numberToGuess = new Random().nextInt(100);
+    numberToGuess = new Random().nextInt(x);
     numberToGuess++;
     do {
       System.out.println("I'm thinking of a number between 1 and 100. Try to guess it!");
@@ -44,7 +47,8 @@ public class completeJavaProgram {
     //Ask the user if they want to continue
     System.out.println("Do you wish to play again? (y/n)");
     answer = kb.next().charAt(0); //Retrieve just the first character of their response
+    kb.close();
+    scanner.close();
     return answer;
-
   }
 }
